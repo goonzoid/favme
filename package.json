@@ -1,0 +1,11 @@
+{
+  "name": "favme",
+  "version": "0.0.0",
+  "description": "A utility for quickly creating a placeholder favicon.ico",
+  "bin": {
+    "favme": "favme.js"
+  },
+  "repository": "git@github.com:willpragnell/favme.git",
+  "author": "Will Pragnell",
+  "license": "BSD"
+}
