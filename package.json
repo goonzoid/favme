@@ -1,6 +1,6 @@
 {
   "name": "favme",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A utility for quickly creating a placeholder favicon.ico",
   "bin": {
     "favme": "favme.js"
