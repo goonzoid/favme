@@ -5,10 +5,6 @@ var exec = require("child_process").exec;
 
 var placeholderFaviconPath = process.env["HOME"] + "/.favicon.ico";
 
-var faviconExists = function() {
-  return fs.existsSync("./favicon.ico");
-};
-
 var copyPlaceholderFavicon = function() {
   exec("cp " + placeholderFaviconPath + " favicon.ico",
     function(err, stdout, stderr) {
@@ -21,7 +17,7 @@ var copyPlaceholderFavicon = function() {
   );
 };
 
-if (faviconExists()) {
+if (fs.existsSync("./favicon.ico")) {
   console.log("favicon.ico already present - aborting");
   process.exit(0);
 }
