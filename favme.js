@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var placeholderFaviconPath = process.env["HOME"] + "/.favicon.ico";
 
 var faviconExists = function() {
   return fs.existsSync("./favicon.ico");
-};
-
-var placeholderFaviconExists = function() {
-  return fs.existsSync(process.env["HOME"] + "/.favicon.ico");
 };
 
 if (faviconExists()) {
@@ -15,7 +12,7 @@ if (faviconExists()) {
   process.exit(0);
 }
 
-if (!placeholderFaviconExists()) {
+if (!fs.existsSync(placeholderFaviconPath)) {
   console.log("placeholder favicon.ico not found");
   console.log("please add a .favicon.ico file to your home directory");
   process.exit(0);
