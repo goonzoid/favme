@@ -15,7 +15,7 @@ directory into the current directory. It won't overwrite an existing
 
 ## Installation
 
-Installation couldn't be simpler:
+Assuming you already have node.js installed, installation couldn't be simpler:
 
     npm install -g favme
 
